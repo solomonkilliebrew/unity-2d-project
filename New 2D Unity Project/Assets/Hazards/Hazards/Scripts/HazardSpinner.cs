@@ -4,8 +4,14 @@ public class HazardSpinner : MonoBehaviour
 {
     public Transform pivot;
 
+    [Range(0,15)]
+    public float speed;
+
+
+
+    public bool isClockwise;
     private void Update()
     {
-        print("Printing to console!");
+        pivot.Rotate(Vector3.back* speed);
     }
 }
