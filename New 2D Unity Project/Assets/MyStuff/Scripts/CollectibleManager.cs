@@ -32,5 +32,11 @@ public class CollectibleManager : MonoBehaviour
     {
         _collectedCoins++;
         DisplayCoinCount();
+        if (_collectedCoins == _totalCoins)
+        {
+            YouWinMenu.Instance.Show();
+        }
+
+         
     }
 }

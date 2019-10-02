@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets._2D;
+using UnityEngine;
 
 public class Hazard : MonoBehaviour
 {
