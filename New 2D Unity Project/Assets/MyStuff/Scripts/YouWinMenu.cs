@@ -8,18 +8,24 @@ public class YouWinMenu : MonoBehaviour
     public static YouWinMenu Instance;
     public GameObject container;
     public Button nextLevelButton;
+    public Button dismissButton;
 
     private void OnEnable()
     {
         nextLevelButton.onClick.AddListener(HandleNextLevelPressed);
+        dismissButton.onClick.AddListener(Hide);
+
+
     }
-    private void OnDisable() {
+    private void OnDisable()
+    {
 
 
         nextLevelButton.onClick.RemoveListener(HandleNextLevelPressed);
 
     }
-    private void HandleNextLevelPressed() {
+    private void HandleNextLevelPressed()
+    {
 
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
@@ -31,7 +37,13 @@ public class YouWinMenu : MonoBehaviour
         Instance = this;
 
     }
-    public void Show() {
+    public void Show()
+    {
         container.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        container.SetActive(false);
     }
 }

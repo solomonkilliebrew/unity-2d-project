@@ -14,6 +14,7 @@ public class CollectibleManager : MonoBehaviour
 
     private void Awake()
     {
+
         Instance = this;
     }
 
@@ -36,7 +37,7 @@ public class CollectibleManager : MonoBehaviour
         {
             YouWinMenu.Instance.Show();
         }
-
+        SoundManager.Instance.PlayCoinCollectSound();
          
     }
 }
